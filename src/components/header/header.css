@@ -1,0 +1,107 @@
+/* src/components/Header.css */
+.header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  /* justify-content: space-between; */
+  align-items: center;
+  background-color: #e4e3e3;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e7e7e7;
+  position: sticky;
+  z-index: 1000;
+  box-sizing: border-box; /* Assurez-vous que le padding est inclus dans la largeur totale */
+}
+
+.logo {
+  display: flex;
+  align-items: flex-start;
+  position: absolute;
+  left: 20px;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.desktop-nav {
+  display: flex;
+}
+
+.desktop-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.desktop-nav ul li {
+  margin-right: 20px;
+}
+
+.desktop-nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.desktop-nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.desktop-nav ul li.active a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Styles pour le popover */
+.MuiPopover-paper {
+  width: 250px; /* Ajustez la largeur selon vos besoins */
+  padding: 0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.MuiMenuItem-root {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  border-bottom: 1px solid #e7e7e7;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.MuiMenuItem-root:last-child {
+  border-bottom: none ;
+}
+
+.MuiMenuItem-root:hover {
+  background-color: #f0f0f0;
+  color: #007bff;
+}
+
+.MuiMenuItem-root.active {
+  background-color: #e7f0ff;
+  color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
